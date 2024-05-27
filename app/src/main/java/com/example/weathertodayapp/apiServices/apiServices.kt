@@ -4,6 +4,7 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.util.Log
+import com.example.weathertodayapp.BuildConfig
 import org.json.JSONException
 import java.io.File
 import java.io.IOException
@@ -18,7 +19,7 @@ import org.json.JSONObject
 
 class apiServices(private val context: Context) {
 
-    var appKey = "3297082a2158c5da65aaef9d62970ded"
+    var appKey = BuildConfig.API_KEY
     val apiUrl = "https://api.openweathermap.org/"
 
     interface ResponseCallback {
