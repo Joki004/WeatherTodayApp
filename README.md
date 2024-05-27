@@ -142,6 +142,8 @@ Here are some screenshots of the app in action:
 
 ### Portrait Mode
 ![image](https://github.com/Joki004/WeatherTodayApp/assets/101185519/ee8ee27d-b92d-42a0-a3ec-472a4586b5f3)
+![image](https://github.com/Joki004/WeatherTodayApp/assets/101185519/8c831a44-ee13-4e29-9e8c-8b96f58a6fb3)
+
 
 
 ### Landscape Mode
