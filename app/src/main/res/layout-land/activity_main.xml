@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    android:paddingBottom="40dp"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/dim_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/black"
+        android:alpha="0.6"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <FrameLayout
+        android:id="@+id/navigation_container"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:elevation="8dp"
+        android:background="@android:color/white"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/smoke_volcanic_ash"
+            android:paddingTop="50dp"
+            app:itemTextColor="@color/white"
+            app:menu="@menu/nav_menu"
+            app:headerLayout="@layout/nav_header" />
+    </FrameLayout>
+
+
+
+    <Button
+        android:id="@+id/MenuLeft"
+        android:layout_width="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_height="50dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        app:drawableRightCompat="@drawable/bx_menu_alt_left"
+        app:layout_constraintBottom_toTopOf="@id/HeaderGuideline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnPrevious"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:text="@string/menu"/>
+    <Button
+        android:id="@+id/btnPrevious"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/forecast"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/HeaderGuideline"
+        app:layout_constraintLeft_toRightOf="@+id/MenuLeft"
+        app:layout_constraintRight_toLeftOf="@id/btnNext"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:autoSizeTextType="uniform"
+        android:text="@string/more_current"
+        app:layout_constraintBottom_toTopOf="@+id/HeaderGuideline"
+        app:layout_constraintLeft_toRightOf="@+id/btnPrevious"
+        app:layout_constraintRight_toLeftOf="@id/FavoriteIcon"
+        app:layout_constraintTop_toTopOf="parent"  />
+
+    <TextView
+        android:id="@+id/FavoriteIcon"
+        android:layout_width="0dp"
+        android:gravity="end"
+        app:flow_verticalAlign="center"
+        android:layout_marginEnd="15dp"
+        android:layout_height="wrap_content"
+        app:drawableRightCompat="@drawable/bx_star"
+        app:layout_constraintBottom_toTopOf="@+id/HeaderGuideline"
+        app:layout_constraintLeft_toRightOf="@+id/btnNext"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autofillHints=""
+        android:autoSizeTextType="uniform"
+        android:drawableStart="@drawable/bx_search_alt_2"
+        android:hint="@string/enter_location"
+        android:scrollbars="vertical"
+        android:inputType="textMultiLine"
+        android:maxLines="5"
+        android:imeOptions="actionDone"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/spinner"
+        app:layout_constraintTop_toBottomOf="@id/HeaderGuideline" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintLeft_toRightOf="@id/searchBar"
+        app:layout_constraintRight_toLeftOf="@id/confirmButton"
+        app:layout_constraintTop_toBottomOf="@id/HeaderGuideline"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="21dp" />
+
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/bx_search_alt_2"
+        android:text="@string/confirm"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintLeft_toRightOf="@id/spinner"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/HeaderGuideline" />
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/lineToGuide"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchBar">
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/lineToGuide2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lineToGuide">
+    </FrameLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/HeaderGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineToGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineToGuide2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

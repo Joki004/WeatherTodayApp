@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hourlyWeatherRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guideline6"/>
+    <TextView
+        android:id="@+id/WindForce"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/wind_strength"
+        android:gravity="center"
+        android:padding="16dp"
+        android:autoSizeTextType="uniform"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/WindDirection"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:drawableEndCompat="@drawable/weather_forecast_windy_wind_storm_sea_svgrepo_com" />
+
+    <TextView
+        android:id="@+id/WindDirection"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/direction"
+        android:gravity="center"
+        android:padding="16dp"
+        android:autoSizeTextType="uniform"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintTop_toBottomOf="@+id/WindForce"
+        app:layout_constraintBottom_toTopOf="@+id/Humidity"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:drawableEndCompat="@drawable/direction_wind_speed_navigation_svgrepo_com" />
+
+
+    <TextView
+        android:id="@+id/Humidity"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/humidity"
+        android:gravity="center"
+        android:padding="16dp"
+        android:autoSizeTextType="uniform"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintTop_toBottomOf="@+id/WindDirection"
+        app:layout_constraintBottom_toTopOf="@+id/visibility"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:drawableEndCompat="@drawable/humidity_svgrepo_com" />
+
+
+    <TextView
+        android:id="@+id/visibility"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/visibility"
+        android:autoSizeTextType="uniform"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:drawableEndCompat="@drawable/eye_svgrepo_com"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/Humidity" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.40" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+</androidx.constraintlayout.widget.ConstraintLayout>

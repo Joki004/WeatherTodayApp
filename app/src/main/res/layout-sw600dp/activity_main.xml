@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="5dp"
+    android:paddingBottom="10dp"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/dim_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/black"
+        android:alpha="0.6"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <FrameLayout
+        android:id="@+id/navigation_container"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:elevation="8dp"
+        android:background="@android:color/white"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/smoke_volcanic_ash"
+            android:paddingTop="50dp"
+            app:itemTextColor="@color/white"
+            app:menu="@menu/nav_menu"
+            app:headerLayout="@layout/nav_header" />
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/HeaderGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.01" />
+
+    <Button
+        android:id="@+id/MenuLeft"
+        android:layout_width="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_height="50dp"
+        android:autoSizeTextType="uniform"
+        app:drawableLeftCompat="@drawable/bx_menu_alt_left"
+        app:layout_constraintBottom_toTopOf="@id/searchBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/FavoriteIcon"
+        app:layout_constraintTop_toTopOf="@id/HeaderGuideline"
+        android:backgroundTint="@color/clear_sky_day"
+        android:text="@string/menu"/>
+
+    <TextView
+        android:id="@+id/FavoriteIcon"
+        android:layout_width="0dp"
+        android:gravity="end"
+        android:layout_marginEnd="15dp"
+        android:foregroundGravity="center"
+        app:flow_verticalAlign="center"
+        android:layout_height="0dp"
+        app:drawableRightCompat="@drawable/bx_star"
+        app:layout_constraintBottom_toTopOf="@id/searchBar"
+        app:layout_constraintLeft_toRightOf="@id/MenuLeft"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/HeaderGuideline"
+        />
+
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:autoSizeTextType="uniform"
+        android:drawableStart="@drawable/bx_search_alt_2"
+        android:hint="@string/enter_location"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/spinner"
+        app:layout_constraintTop_toBottomOf="@id/MenuLeft" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintLeft_toRightOf="@id/searchBar"
+        app:layout_constraintRight_toLeftOf="@id/confirmButton"
+        app:layout_constraintTop_toBottomOf="@id/MenuLeft"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="21dp" />
+
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/bx_search_alt_2"
+        android:text="@string/confirm"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintLeft_toRightOf="@id/spinner"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/MenuLeft" />
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/lineToGuide"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchBar">
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/lineToGuide2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@id/lineToGuide">
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/fragmentContainer3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/lineToGuide2"
+        app:layout_constraintLeft_toRightOf="@+id/guideline7"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lineToGuide">
+    </FrameLayout>
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineToGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.40" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineToGuide2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

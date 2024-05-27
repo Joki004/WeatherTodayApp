@@ -1,0 +1,102 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Left Container -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/leftContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        >
+
+        <TextView
+            android:id="@+id/textViewCity"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="City"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:drawableEnd="@drawable/bxs_location_plus"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textViewTemperature"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:id="@+id/textViewTemperature"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Temperature"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+
+            app:layout_constraintTop_toBottomOf="@+id/textViewCity"
+            app:layout_constraintBottom_toTopOf="@+id/textViewPressure"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:id="@+id/textViewPressure"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Pressure"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTemperature"
+            app:layout_constraintBottom_toTopOf="@+id/textViewDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Description"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPressure"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Right Container -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rightContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <ImageView
+            android:id="@+id/imageViewWeatherIcon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/weather_icon_description"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

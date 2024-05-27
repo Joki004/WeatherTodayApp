@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+    <!-- Pattern 1 -->
+    <TextView
+        android:id="@+id/Day1Date"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+
+        android:gravity="start|center_vertical"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@id/Day2Date"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/Day1Icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+
+        android:gravity="center"
+        android:text="City"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@id/Day2Date"
+        app:layout_constraintEnd_toStartOf="@id/Day1Prevision"
+        app:layout_constraintStart_toEndOf="@id/guideline3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Day1Prevision"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="start|center_vertical"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@id/Day2Prevision"
+        app:layout_constraintEnd_toStartOf="@id/guideline4"
+        app:layout_constraintStart_toEndOf="@id/Day1Icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:paddingLeft="16dp"
+        android:id="@+id/Day1Description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="start|center_vertical"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@id/Day2Date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline4"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+    <!-- Pattern 2 -->
+    <TextView
+        android:id="@+id/Day2Date"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="start|center_vertical"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@id/Day3Date"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Day1Date" />
+
+    <ImageView
+        android:id="@+id/Day2Icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="City"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@id/Day3Icon"
+        app:layout_constraintEnd_toStartOf="@id/Day2Prevision"
+        app:layout_constraintStart_toEndOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/Day1Icon" />
+
+    <TextView
+        android:id="@+id/Day2Prevision"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="start|center_vertical"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@id/Day3Prevision"
+        app:layout_constraintEnd_toStartOf="@id/guideline4"
+        app:layout_constraintStart_toEndOf="@id/Day2Icon"
+        app:layout_constraintTop_toBottomOf="@id/Day1Prevision" />
+
+    <TextView
+        android:paddingLeft="16dp"
+        android:id="@+id/Day2Description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="start|center_vertical"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@id/Day3Description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/Day1Description" />
+
+    <!-- Pattern 3 -->
+
+    <TextView
+        android:id="@+id/Day3Date"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="start|center_vertical"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@id/Day4Date"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Day2Date" />
+
+    <ImageView
+        android:id="@+id/Day3Icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="Icon 3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@id/Day4Icon"
+        app:layout_constraintEnd_toStartOf="@id/Day3Prevision"
+        app:layout_constraintStart_toEndOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/Day2Icon" />
+
+    <TextView
+        android:id="@+id/Day3Prevision"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="start|center_vertical"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@id/Day4Prevision"
+        app:layout_constraintEnd_toStartOf="@id/guideline4"
+        app:layout_constraintStart_toEndOf="@id/Day4Icon"
+        app:layout_constraintTop_toBottomOf="@id/Day2Prevision" />
+
+    <TextView
+        android:paddingLeft="16dp"
+        android:id="@+id/Day3Description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="start|center_vertical"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@id/Day4Description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/Day2Description" />
+
+    <!-- Pattern 4 -->
+    <TextView
+        android:id="@+id/Day4Date"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="start|center_vertical"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@id/Day5Date"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Day3Date" />
+
+    <ImageView
+        android:id="@+id/Day4Icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="Icon 3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@id/Day5Icon"
+        app:layout_constraintEnd_toStartOf="@id/Day3Prevision"
+        app:layout_constraintStart_toEndOf="@id/Day3Date"
+        app:layout_constraintTop_toBottomOf="@id/Day3Icon" />
+
+    <TextView
+        android:id="@+id/Day4Prevision"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="start|center_vertical"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@id/Day5Prevision"
+        app:layout_constraintEnd_toStartOf="@id/guideline4"
+        app:layout_constraintStart_toEndOf="@id/Day3Icon"
+        app:layout_constraintTop_toBottomOf="@id/Day3Prevision"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+
+        android:paddingStart="16dp"
+        android:id="@+id/Day4Description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="start|center_vertical"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@id/Day5Description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/Day3Description"
+        tools:ignore="RtlSymmetry" />
+
+    <!-- Pattern 5 -->
+    <TextView
+        android:id="@+id/Day5Date"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="start|center_vertical"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Day4Date"
+        tools:ignore="RtlHardcoded" />
+
+    <ImageView
+        android:id="@+id/Day5Icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="Icon 3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/Day5Prevision"
+        app:layout_constraintStart_toEndOf="@id/Day5Date"
+        app:layout_constraintTop_toBottomOf="@id/Day4Icon" />
+
+    <TextView
+        android:id="@+id/Day5Prevision"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="start|center_vertical"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline4"
+        app:layout_constraintStart_toEndOf="@id/Day5Icon"
+        app:layout_constraintTop_toBottomOf="@id/Day4Prevision" />
+
+    <TextView
+        android:paddingLeft="16dp"
+        android:id="@+id/Day5Description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="start|center_vertical"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/Day4Description"
+        tools:ignore="RtlHardcoded" />
+
+    <!-- Pattern 6 -->
+    <!--  <TextView
+          android:id="@+id/Day6Date"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:text="Day 3"
+          android:gravity="left" android:autoSizeTextType="uniform"
+          android:textAppearance="@style/TextAppearance.AppCompat.Large"
+          app:layout_constraintTop_toBottomOf="@id/Day5Date"
+          app:layout_constraintBottom_toTopOf="@id/Day7Date"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toStartOf="@+id/guideline3" />
+      <ImageView
+          android:id="@+id/Day6Icon"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:text="Icon 3"
+          android:gravity="center" android:autoSizeTextType="uniform"
+          android:textAppearance="@style/TextAppearance.AppCompat.Large"
+          app:layout_constraintTop_toBottomOf="@id/Day5Icon"
+          app:layout_constraintBottom_toTopOf="@id/Day7Icon"
+          app:layout_constraintStart_toEndOf="@id/Day6Date"
+          app:layout_constraintEnd_toStartOf="@id/Day6Prevision" />
+      <TextView
+          android:id="@+id/Day6Prevision"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:text="Forecast 3"
+          android:gravity="center" android:autoSizeTextType="uniform"
+          android:textAppearance="@style/TextAppearance.AppCompat.Large"
+          app:layout_constraintTop_toBottomOf="@id/Day5Prevision"
+          app:layout_constraintBottom_toTopOf="@id/Day7Prevision"
+          app:layout_constraintStart_toEndOf="@id/Day6Icon"
+          app:layout_constraintEnd_toStartOf="@id/guideline4" />
+      <TextView
+          android:id="@+id/Day6Description"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:text="Desc 3"
+          android:gravity="center" android:autoSizeTextType="uniform"
+          android:textAppearance="@style/TextAppearance.AppCompat.Large"
+          app:layout_constraintTop_toBottomOf="@id/Day5Description"
+          app:layout_constraintBottom_toTopOf="@id/Day7Description"
+          app:layout_constraintStart_toEndOf="@id/guideline4"
+          app:layout_constraintEnd_toEndOf="parent" />
+
+
+       Pattern 7 -->
+    <!--
+    <TextView
+        android:id="@+id/Day7Date"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Day 7"
+        android:gravity="center" android:autoSizeTextType="uniform"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintTop_toBottomOf="@id/Day6Date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3" />
+
+    <ImageView
+        android:id="@+id/Day7Icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center" android:autoSizeTextType="uniform"
+        android:text="Icon 7"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/Day7Prevision"
+        app:layout_constraintStart_toEndOf="@id/Day7Date"
+        app:layout_constraintTop_toBottomOf="@id/Day6Icon" />
+
+    <TextView
+        android:id="@+id/Day7Prevision"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center" android:autoSizeTextType="uniform"
+        android:text="Forecast 7"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline4"
+        app:layout_constraintStart_toEndOf="@id/Day7Icon"
+        app:layout_constraintTop_toBottomOf="@id/Day6Prevision"
+        app:layout_constraintVertical_bias="0.0" />
+    <TextView
+        android:id="@+id/Day7Description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Desc 7"
+        android:gravity="center" android:autoSizeTextType="uniform"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintTop_toBottomOf="@id/Day6Description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline4"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+ -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.70" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

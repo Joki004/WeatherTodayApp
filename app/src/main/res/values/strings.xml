@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">weatherApp</string>
+    <string name="enter_location">Enter Location...</string>
+    <string name="confirm">Confirm</string>
+    <string name="weather_icon_description" />
+    <string name="temp_format"> %1$.1f / %2$.1f</string>
+    <string name="wind_strength">wind strength</string>
+    <string name="direction">direction</string>
+    <string name="visibility">Visibility</string>
+    <string name="humidity">Humidity</string>
+    <string name="forecast">Forecast</string>
+    <string name="more_current">More Current</string>
+    <string name="favourites">Favourites</string>
+    <string name="close_nav_bar">Close Nav bar</string>
+    <string name="favorite">Favorite</string>
+    <string name="menu">Menu</string>
+    <string name="favorite_list">Favorite List</string>
+    <string name="delete">Delete</string>
+    <string name="favorite_location">Favorite Location</string>
+
+</resources>

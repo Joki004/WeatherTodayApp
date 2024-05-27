@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Clear and Sunny -->
+    <color name="clear_sky_day">#87CEEB</color>
+    <color name="clear_sky_night">#191970</color>
+
+    <!-- Clouds -->
+    <color name="clouds_few">#B0C4DE</color>
+    <color name="clouds_scattered">#A2B5CD</color>
+    <color name="clouds_broken">#6C7B8B</color>
+    <color name="clouds_overcast">#2F4F4F</color>
+
+    <!-- Thunderstorm -->
+    <color name="thunderstorm">#4B0082</color>
+
+    <!-- Drizzle -->
+    <color name="drizzle_light">#D3D3D3</color>
+
+    <!-- Rain -->
+    <color name="rain_light">#ADD8E6</color>
+    <color name="rain_moderate">#4682B4</color>
+    <color name="rain_heavy">#483D8B</color>
+
+    <!-- Snow -->
+    <color name="snow_light">#F0F8FF</color>
+    <color name="snow_heavy">#DCDCDC</color>
+    <color name="sleet">#B0C4DE</color>
+
+    <!-- Atmosphere -->
+    <color name="mist_fog">#F5F5F5</color>
+    <color name="dust_sand">#F4A460</color>
+    <color name="smoke_volcanic_ash">#696969</color>
+
+    <!-- Additional -->
+    <color name="background_default">#FFFFFF</color>
+</resources>
