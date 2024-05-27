@@ -140,16 +140,7 @@ The user interface is based on fragments and adapts to different screen orientat
 ## Screenshots
 Here are some screenshots of the app in action:
 
-### Portrait Mode
-![image](https://github.com/Joki004/WeatherTodayApp/assets/101185519/ee8ee27d-b92d-42a0-a3ec-472a4586b5f3)
-![image](https://github.com/Joki004/WeatherTodayApp/assets/101185519/8c831a44-ee13-4e29-9e8c-8b96f58a6fb3)
 
-
-
-### Landscape Mode
-![image](https://github.com/Joki004/WeatherTodayApp/assets/101185519/48207677-7c56-491b-8d0d-2eba184b1424)
-
-### Tablet Mode
 ![image](https://github.com/Joki004/WeatherTodayApp/assets/101185519/bb6dcb31-d25b-49c8-a4e9-a519bb8638b6)
 
 
