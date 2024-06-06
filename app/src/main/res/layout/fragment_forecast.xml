@@ -104,7 +104,7 @@
         app:layout_constraintTop_toBottomOf="@id/Day1Prevision" />
 
     <TextView
-        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
         android:id="@+id/Day2Description"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -115,7 +115,8 @@
         app:layout_constraintBottom_toTopOf="@id/Day3Description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/guideline4"
-        app:layout_constraintTop_toBottomOf="@id/Day1Description" />
+        app:layout_constraintTop_toBottomOf="@id/Day1Description"
+        tools:ignore="RtlHardcoded,RtlSymmetry"/>
 
     <!-- Pattern 3 -->
 
@@ -159,7 +160,7 @@
         app:layout_constraintTop_toBottomOf="@id/Day2Prevision" />
 
     <TextView
-        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
         android:id="@+id/Day3Description"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -170,7 +171,8 @@
         app:layout_constraintBottom_toTopOf="@id/Day4Description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/guideline4"
-        app:layout_constraintTop_toBottomOf="@id/Day2Description" />
+        app:layout_constraintTop_toBottomOf="@id/Day2Description"
+        tools:ignore="RtlSymmetry" />
 
     <!-- Pattern 4 -->
     <TextView
@@ -283,7 +285,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/guideline4"
         app:layout_constraintTop_toBottomOf="@id/Day4Description"
-        tools:ignore="RtlHardcoded" />
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
 
     <!-- Pattern 6 -->
     <!--  <TextView

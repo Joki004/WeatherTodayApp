@@ -77,13 +77,12 @@ class MainActivity : AppCompatActivity() {
             loadInitialFragments()
         }
 
-        // Start the timer
+
         handler.post(refreshRunnable)
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        // Stop the timer
         handler.removeCallbacks(refreshRunnable)
     }
 
@@ -146,6 +145,16 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        handler.removeCallbacks(refreshRunnable)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        handler.post(refreshRunnable)
     }
 
     private fun toggleNavigationView() {
@@ -363,7 +372,9 @@ class MainActivity : AppCompatActivity() {
                     Log.d("MainActivity", "Setting background for description: $description")
 
                     runOnUiThread {
-                        mainLayout.setBackgroundColor(ContextCompat.getColor(this, colorRes))
+                        val color = ContextCompat.getColor(this@MainActivity, colorRes)
+                        mainLayout.setBackgroundColor(color)
+                        menuLeft.setBackgroundColor(color)
                         Log.d("MainActivity", "Background color set")
                     }
                 } else {
